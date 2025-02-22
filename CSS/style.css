@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Глобальные стили */
+body {
+  font-family: "Roboto Mono", serif;
+  margin: 0;
+  padding: 0;
+  background: #1f1b24;
+  color: #e0c9a6;
+  line-height: 1.8;
+}
+
+/* Навигация */
+nav {
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  background: #4a2f49;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  color: #e0c9a6;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s, background 0.3s;
+  border-radius: 50px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #1f1b24;
+  background: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* ==================== */
+/* 1. ГЛАВНАЯ СТРАНИЦА */
+/* ==================== */
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #4a2f49;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Основной блок */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  max-width: 500px;
+  animation: slideInLeft 1s ease-in-out;
+  text-align: left;
+}
+
+.intro-text h2 {
+  font-size: 2.2rem;
+  color: #ffcc00;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: #1f1b24;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 30px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+.btn:hover {
+  background: #e0b900;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.7);
+}
+
+/* Картинка */
+.intro-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  animation: slideInRight 1s ease-in-out;
+  transition: transform 0.5s;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ==================== */
+/* 2. СТРАНИЦА МАРКЕТПЛЕЙС */
+/* ==================== */
+
+.market-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #3a2b3f;
+  color: #ffcc00;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.market-header h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.market {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.product {
+  background: linear-gradient(145deg, #2c1e2e, #3a2b3f);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: scale(1.08);
+}
+
+.product img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #3a2b3f;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin: 10% auto;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content li {
+  margin-bottom: 5px;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffcc00;
+}
+
+.close:hover {
+  color: #e0c9a6;
+}
+
+/* Кнопки переключения галереи */
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.gallery-controls button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.gallery-controls button:hover {
+  background: #e0b900;
+}
+
+/* Футер */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1022;
+  color: #d7b29d;
+  font-size: 1.1rem;
+  margin-top: 50px;
+  position: relative;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer:hover {
+  background: #28122d;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-image img {
+    max-width: 100%;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
